@@ -31,8 +31,17 @@ let phone = (phone: string) => {
 phone("91285968");
 
 // void type
+// Similar to languages like Java, void is used where there is no data. For example, if a function does not return any value then you can specify void as return type.
+// There is no meaning to assign void to a variable, as only null or undefined is assignable to void.
 function hello(): void{
     console.log("Hi")
     // return 10; Type 'number' is not assignable to type 'void'.ts(2322)
 }
 hello();
+
+// never type never return any value
+
+function cityName(name: string): never{
+    throw Error(name)
+}
+// cityName("Oslo")
